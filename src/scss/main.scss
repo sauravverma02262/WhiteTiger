@@ -1,0 +1,63 @@
+@import 'variables';
+@import 'mixins';
+@import 'navigation';
+@import 'home';
+@import 'slider';
+@import 'event';
+@import 'contactus';
+body {
+    min-height: 800px;
+    background: url(../src/img/light-shade.png) no-repeat center -100px fixed, url(../src/img/background.jpg) no-repeat center -100px fixed;
+    //background: skyblue;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .container {
+        max-width: 1000px;
+        position: relative;
+    }
+}
+
+.footer {
+    height: 300px;
+}
+
+.body-wrapper {
+    box-shadow: 0 0 10px #d1d1d1;
+    position: relative;
+    margin: 0 auto;
+    .logo {
+        &.fixed {
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            top: 6px;
+            left: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid yellow;
+        }
+        position: absolute;
+        z-index: 100;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 160px;
+        width: 160px;
+        top: 40px;
+        left: 30px;
+        z-index: 100;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.gallery-view {
+    img {
+        width: 100%;
+        height: 200px;
+        padding: 5px;
+    }
+}

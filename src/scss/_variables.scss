@@ -1,0 +1,105 @@
+$red: white;
+.reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reset-link {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.email-id {
+    color: blue;
+}/* .frame {
+    background: url(../src/img/frame.png)no-repeat top left;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} */
+
+.wtapps {
+
+    position: relative;
+    background: white;
+    padding: 20px;
+    padding-top: 100px;
+    font-size: 16px;
+    line-height: 26px;
+    margin: auto;
+    .content {
+        position: relative;
+        padding: 10px;
+        margin-bottom: 100px;
+        .Sub-headings {
+            background: url(../src/img/subtitleholder_mid.png);
+            font-size: 24px;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px 10px 30px;
+            line-height: 40px;
+            position: absolute;
+            left: -20px;
+            top: -64px;
+            &::after {
+                content: '';
+                background: url(../src/img/subtitleholder_right.png);
+                width: 31px;
+                height: 59px;
+                display: inline-block;
+                position: absolute;
+                right: -30px;
+                top: 0px;
+                background-size: 100% 100%;
+            }
+            &::before {
+                content: '';
+                background: url(../src/img/subtitleholder_left.png);
+                width: 10px;
+                height: 59px;
+                display: inline-block;
+                position: absolute;
+                left: -10px;
+                top: 0px;
+                background-size: 100% 100%;
+            }
+        }
+        div.start::first-letter {
+            font-size: 200%;
+            color: black;
+        }
+        .page-section {
+            
+            .title {
+                padding-bottom: 10px;
+                border-bottom: 1px solid #d1d1d1;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+            .page-section {
+                padding-left: 15px;
+            }
+            + .page-section {
+                margin-top: 60px;
+                &::first-letter {
+                    font-size: 200%;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.pdesk {
+    font-size: 16px;
+    .greetings {
+        margin-top: 20px;
+        font-weight: 600;
+        text-align: right;
+    }
+}

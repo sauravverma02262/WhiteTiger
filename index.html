@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" ng-app="WhiteTiger">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>WTAPPS</title>
+    <base href="/">
+    <script type="text/javascript">
+    (function() {
+        var method;
+        var noop = function noop() {};
+        var methods = [
+            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+            'timeStamp', 'trace', 'warn'
+        ];
+        var length = methods.length;
+        var console = (window.console = window.console || {});
+
+        while (length--) {
+            method = methods[length];
+            console[method] = noop;
+        }
+    }());
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./dist/bundle.css">
+    <script src="./src/js/libs/jssor.slider-22.2.13.min.js" type="text/javascript"></script>
+    <script src="./dist/bundle.js"></script>
+    
+</head>
+
+<body>
+    <div class="container body-wrapper" id="top">
+        <div navigation></div>
+        <div ng-view=""></div>
+        <div class="footer">
+            
+            
+        </div>
+    </div>
+    <script type="text/javascript">
+    var HOST = "./";
+    $(document).on("scroll", function() {
+
+        $("header.fixed-bar").hide()
+        if ($(document).scrollTop() > 160) {
+            $("header.fixed-bar").addClass("fixed").show();
+            $(".logo").addClass("fixed").show();
+        } else {
+            $("header.fixed-bar").removeClass("fixed").hide()
+            $(".logo").removeClass("fixed").show()
+        }
+    });
+    </script>
+</body>
+
+</html>

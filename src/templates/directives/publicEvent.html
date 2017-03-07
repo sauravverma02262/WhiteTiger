@@ -1,0 +1,85 @@
+<div class="col-md-4 ">
+    <div class="event-card {{event.eventClass}}">
+        <div class="event hidden-sm">
+            <div class="circle">
+                <img src="{{event.image}}">
+            </div>
+        </div>
+        <div class="details">
+            <div class="heading">
+                {{event.title}}
+            </div>
+            <div class="desp">
+                <div ng-if="event.eventClass == 'birthday'">
+                    <div class="birthday-flash animate-show animate-hide" ng-repeat="item in event.eventData" ng-show="active == item.AdmissionNumber">
+                        <div class="image-title">{{item.name}}</div>
+                        <div class="image-title">{{item.section}}</div>
+                    </div>
+                </div>
+                <div class="description-box" ng-if="event.eventClass != 'birthday'">
+                    {{event.description}}
+                </div>
+            </div>
+            <div class="read-more" ng-click="showDetails(event)">Read more</div>
+        </div>
+    </div>
+</div>
+<div ng-show="popup" class="popup animate-show animate-hide">
+    <div class="close-pop" ng-click="popup = !popup">
+        <img src="./images/close.png">
+    </div>
+    <div class="event-wrapper">
+        <div class="event-title">{{popData.title}}</div>
+        <div class="event-content" ng-if="popData.eventClass == 'birthday'">
+            <table class="table-striped table">
+                <tr>
+                    <th>S.N.</th>
+                    <th>Name</th>
+                    <th>Section</th>
+                </tr>
+                <tr ng-repeat="item in popData.eventData">
+                    <td>
+                        {{$index + 1 }}
+                    </td>
+                    <td>
+                        <div class="image-title">{{item.name}}</div>
+                    </td>
+                    <td>
+                        <div class="image-title">{{item.section}}</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="event-content" ng-if="popData.eventClass == 'calender'">
+            <div class="page-section">
+               
+                <div class="page-section" style="padding-top:30px;">
+                 <div class="title">School Calendar for Activities (2016-2017)</div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>Month.</th>
+                                <th>Celebration</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="popEvent in popData.eventData">
+                                <td ng-bind="popEvent.sn"></td>
+                                <td ng-bind="popEvent.month"></td>
+                                <td ng-bind="popEvent.celebration"></td>
+                                <td ng-bind="popEvent.activity"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="page-section">
+            </div>
+        </div>
+        <div class="event-footer">
+            <button class="btn btn-primary" ng-click="popup = !popup">Close</button>
+        </div>
+    </div>
+</div>
