@@ -1,0 +1,158 @@
+.event-card {
+    $width: 100%;
+    width: 100%;
+    margin: 40px auto;
+    .event {
+        margin: 0 auto;
+        background: red;
+        border-radius: 50% 50% 0 0;
+        .circle {
+            margin: 0 auto;
+            border-radius: 50%;
+            height: $width;
+            border: 30px solid red;
+            width: $width;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .heading {
+        background: red;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 24px;
+        color: white;
+        margin-top: -30px;
+    }
+    .read-more {
+        display: inline-block;
+        padding: 0px 10px;
+        border: 4px solid rgba(0, 0, 0, .6);
+        border-radius: 4px;
+        overflow: hidden;
+        margin: -10px auto;
+        background: #ff0c00;
+        position: absolute;
+        left: 32%;
+        color: white;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .desp {
+        position: relative;
+        height: 68px;
+        background: rgb(185, 6, 6);
+        overflow: hidden;
+        .birthday-flash {
+            position: absolute;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            padding: 8px;
+            display: block;
+            right: 0;
+            left: 0;
+        }
+        .description-box {
+            color: white;
+            padding: 8px;
+            text-align: center;
+        }
+    }
+}
+
+$birthday:green;
+.event-card.birthday {
+    .event,
+    .heading,
+    .read-more {
+        background: $birthday;
+        .circle {
+            border: 30px solid $birthday;
+        }
+    }
+    .desp {
+        .birthday-flash {
+            background: $birthday * .5;
+        }
+    }
+}
+
+$bustrack:teal;
+.event-card.track-bus {
+    .event,
+    .heading,
+    .read-more {
+        background: $bustrack;
+        .circle {
+            border: 30px solid $bustrack;
+        }
+    }
+    .desp {
+        .description-box {
+            background: $bustrack * .5;
+        }
+    }
+}
+
+.popup {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000000;
+    background: rgba(0, 0, 0, .7);
+    .close-pop {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+        cursor: pointer;
+    }
+    .event-wrapper {
+        position: absolute;
+        margin: auto;
+        top: 10%;
+        right: 0;
+        bottom: 10%;
+        left: 0;
+        width: 70%;
+        height: auto;
+        background-color: #ccc;
+        border-radius: 3px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        .event-title {
+            background: #337ab7;
+            color: #fff;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 20px;
+            font-size: 22px;
+            text-shadow: 1px 2px 3px black;
+        }
+        .event-content {
+            position: absolute;
+            top: 55px;
+            bottom: 40px;
+            overflow: auto;
+            width: 100%;
+        }
+        .event-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 8px 20px;
+            background: #d1d1d1;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,271 @@
+.slidenav {
+    position: absolute;
+    top: 200px;
+    font-size: 48px;
+    width: 80px;
+    height: 100px;
+    background: rgba(0, 0, 0, .3);
+    color: white;
+}
+
+.slider-wrapper {
+    margin: 0 auto;
+    height: 440px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: white;
+    border-top: 4px solid orange;
+    img {
+        width: 100%;
+        position: absolute;
+        height: 440px;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 1px 5px 5px #d1d1d1;
+    }
+    .image-title {
+        position: absolute;
+        bottom: 100px;
+        background: black;
+        padding: 20px;
+        font-size: 24px;
+        color: white;
+    }
+    .image-description {
+        height: 80px;
+        background: white;
+        color: red;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .next {
+        @extend .slidenav;
+        right: 0;
+    }
+    .previous {
+        @extend .slidenav;
+        left: 0;
+    }
+}
+
+.slider.ng-show {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    transition: 3s all ease;
+    -moz-transition: 3s all ease;
+    -webkit-transition: 3s all ease;
+}
+
+
+/* enter animation */
+
+.slider.ng-show {
+    -webkit-animation: slideInRight 3s both ease;
+    -moz-animation: slideInRight 3s both ease;
+    animation: slideInRight 3s both ease;
+}
+
+
+/* leave animation */
+
+.slider img {
+    -webkit-animation: slideOutLeft 3s both ease;
+    -moz-animation: slideOutLeft 3s both ease;
+    animation: slideOutLeft 3s both ease;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+@-moz-keyframes slideOutLeft {
+    to {
+        -moz-transform: translateX(-200%);
+    }
+}
+
+@-webkit-keyframes slideOutLeft {
+    to {
+        -webkit-transform: translateX(-200%);
+    }
+}
+
+
+/* slide in from the right */
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes slideInRight {
+    from {
+        -moz-transform: translateX(200%);
+    }
+    to {
+        -moz-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes slideInRight {
+    from {
+        -webkit-transform: translateX(200%);
+    }
+    to {
+        -webkit-transform: translateX(0);
+    }
+}
+
+.animate-show,
+.animate-hide {
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+    -ms-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+}
+
+.animate-show.ng-hide-remove,
+.animate-hide.ng-hide-add.ng-hide-add-active {
+    opacity: 0;
+    display: block !important;
+}
+
+.animate-hide.ng-hide-add,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+    opacity: 1;
+    display: block !important;
+}
+
+
+/* 
+
+   /* jssor slider bullet navigator skin 03 css */
+
+
+/*
+        .jssorb03 div           (normal)
+        .jssorb03 div:hover     (normal mouseover)
+        .jssorb03 .av           (active)
+        .jssorb03 .av:hover     (active mouseover)
+        .jssorb03 .dn           (mousedown)
+        */
+
+.jssorb03 {
+    position: absolute;
+}
+
+.jssorb03 div,
+.jssorb03 div:hover,
+.jssorb03 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    line-height: 21px;
+    color: white;
+    font-size: 12px;
+    background: url('img/b03.png') no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.jssorb03 div {
+    background-position: -5px -4px;
+}
+
+.jssorb03 div:hover,
+.jssorb03 .av:hover {
+    background-position: -35px -4px;
+}
+
+.jssorb03 .av {
+    background-position: -65px -4px;
+}
+
+.jssorb03 .dn,
+.jssorb03 .dn:hover {
+    background-position: -95px -4px;
+}
+
+
+/* jssor slider arrow navigator skin 03 css */
+
+
+/*
+        .jssora03l                  (normal)
+        .jssora03r                  (normal)
+        .jssora03l:hover            (normal mouseover)
+        .jssora03r:hover            (normal mouseover)
+        .jssora03l.jssora03ldn      (mousedown)
+        .jssora03r.jssora03rdn      (mousedown)
+        .jssora03l.jssora03ldn      (disabled)
+        .jssora03r.jssora03rdn      (disabled)
+        */
+
+.jssora03l,
+.jssora03r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    background: url('./src/img/a03.png') no-repeat;
+    overflow: hidden;
+}
+
+.jssora03l {
+    background-position: -3px -33px;
+}
+
+.jssora03r {
+    background-position: -63px -33px;
+}
+
+.jssora03l:hover {
+    background-position: -123px -33px;
+}
+
+.jssora03r:hover {
+    background-position: -183px -33px;
+}
+
+.jssora03l.jssora03ldn {
+    background-position: -243px -33px;
+}
+
+.jssora03r.jssora03rdn {
+    background-position: -303px -33px;
+}
+
+.jssora03l.jssora03lds {
+    background-position: -3px -33px;
+    opacity: .3;
+    pointer-events: none;
+}
+
+.jssora03r.jssora03rds {
+    background-position: -63px -33px;
+    opacity: .3;
+    pointer-events: none;
+}
+.slide-wrapper {
+    height:200px;
+    width:100%;
+    background: white;
+    padding: 15px 10px;
+    overflow: hidden;
+}

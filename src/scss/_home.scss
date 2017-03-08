@@ -1,0 +1,25 @@
+body {
+    @include background ($red);
+}
+
+.train {
+    position: absolute;
+    z-index: 100;
+    height: 200px;
+    width: 100%;
+    img {
+        width: 284px;
+        height: 100%;
+    }
+    &:after {
+            content: '';
+    width: 713px;
+    background: url(../src/img/train-back.png);
+    height: 246px;
+    position: absolute;
+    left: 257px;
+    z-index: -1;
+    background-size: 30% 88%;
+    background-position: 0 201px;
+    }
+}

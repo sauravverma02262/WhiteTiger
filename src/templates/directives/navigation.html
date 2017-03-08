@@ -1,0 +1,27 @@
+<header class="navigation-top">
+    <div class="container">
+        <div class="logo"><img src="./src/img/wtapps-logo.png" /></div>
+        <ul class="main">
+            <li ng-repeat="x in menu" ng-class="{'active': x.url == activeUrl}" >
+                <a href="" ng-click='navigateTo(x.url,x.url)'>{{x.item}}</a>
+                <ul class="sub" ng-if="x.submenu.length > 0">
+                    <li ng-repeat="sub in x.submenu"><a class="active" ng-click='navigateTo(sub.url,x.url);'>{{sub.item}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<header class="navigation-top fixed-bar">
+    <div class="container">
+    <div class="logo"><img src="./src/img/wtapps-logo.png" /></div>
+        <ul class="main">
+            <li ng-repeat="x in menu" ng-class="{'active': x.url == activeUrl}">
+                <a href="" ng-click='navigateTo(x.url,x.url)'>{{x.item}}</a>
+                <ul class="sub" ng-if="x.submenu.length > 0" >
+                    <li ng-repeat="sub in x.submenu"><a class="active" ng-click='navigateTo(sub.url,x.url);'>{{sub.item}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+<div slider></div>

@@ -1,0 +1,135 @@
+<div class="wtapps row">
+    <div class="content col-sm-12 col-md-12">
+        <div class="Sub-headings">Home</div>
+        <div class="start">
+            <div class="page-section">
+                <div public-event event="calender"></div>
+                <div public-event event="birthday"></div>
+                <div public-event event="trackBus"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+jssor_1_slider_init = function() {
+
+    var jssor_1_options = {
+        $AutoPlay: true,
+        $AutoPlaySteps: 4,
+        $SlideDuration: 160,
+        $SlideWidth: 200,
+        $SlideSpacing: 3,
+        $Cols: 4,
+        $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$,
+            $Steps: 4
+        },
+        $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$,
+            $SpacingX: 1,
+            $SpacingY: 1
+        }
+    };
+
+    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+    /*responsive code begin*/
+    /*remove responsive code if you don't want the slider scales while window resizing*/
+    function ScaleSlider() {
+        var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+        if (refSize) {
+            refSize = Math.min(refSize, 809);
+            jssor_1_slider.$ScaleWidth(refSize);
+        } else {
+            window.setTimeout(ScaleSlider, 30);
+        }
+    }
+    ScaleSlider();
+    $Jssor$.$AddEvent(window, "load", ScaleSlider);
+    $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+    $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+    /*responsive code end*/
+};
+</script>
+<div class="slide-wrapper" ng-controller="footerCtrl">
+    <div class="train"><img src="./src/img/train-front.png"></div>
+    <div id="jssor_1" style="    position: relative;margin: 0px auto 0px 14%;top: 0px;left: 22px;width: 809px; height: 150px;overflow: hidden;visibility: visible;z-index: 100;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('../src/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:100%;height:150px;overflow:hidden;">
+            <div>
+                <img data-u="image" src="../src/gallery/image100.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image99.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image98.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image97.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image97.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image95.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image94.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image93.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image92.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image91.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image50.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image49.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image48.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image60.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image70.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image80.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image40.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image30.jpg" />
+            </div>
+            <div>
+                <img data-u="image" src="../src/gallery/image10.jpg" />
+            </div>
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb03" style="bottom:10px;right:10px;">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:21px;height:21px;">
+                <div data-u="numbertemplate"></div>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora03l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora03r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
+    </div>
+    <script type="text/javascript">
+    jssor_1_slider_init();
+    </script>
+</div>

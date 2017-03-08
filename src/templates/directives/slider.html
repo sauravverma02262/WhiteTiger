@@ -1,0 +1,10 @@
+<div class="slider-wrapper">
+    <div class="image-wrappper animate-show animate-hide" ng-repeat="image in imageList" ng-show="active == image.id">
+        <!-- ng-show="active == image.id" -->
+        <img src="./src/gallery/{{image.imageUrl}}">
+        <!-- <span class="image-title">{{image.title}}</span> -->
+        <!-- <span class="image-description">{{image.description}}</span> -->
+    </div>
+    <!-- <div class="next" ng-click="next()"> </div>
+    <div class="previous" ng-click="previous()"> </div> -->
+</div>

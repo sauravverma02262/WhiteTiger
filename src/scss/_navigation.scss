@@ -1,0 +1,87 @@
+.fixed-bar {
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+.navigation-top {
+    position: relative;
+    height: 120px;
+    &.fixed {
+        background: -moz-linear-gradient(top, #3b5998, #2b4170);
+        background: -ms-linear-gradient(top, #3b5998, #2b4170);
+        background: -webkit-linear-gradient(top, #3b5998, #2b4170);
+        height: 60px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        ul.main {
+            margin-top: 0px;
+            &>li {
+                a {
+                    line-height: 60px;
+                    color: white;
+                    text-shadow: none;
+                }
+                &:hover {
+                    ul {
+                        top: 60px;
+                    }
+                }
+            }
+        }
+    }
+    ul.main {
+        z-index: 1000;
+        @extend .reset-list;
+        float: right;
+        position: absolute;
+        margin-top: 90px;
+        z-index: 1000;
+        right: 30px;
+        >li {
+            cursor: pointer;
+            float: left;
+            position: relative;
+            line-height: 30px;
+            a {
+                padding: 5px;
+                margin: 0 5px;
+                @extend .reset-link;
+                color: white;
+                text-transform: uppercase;
+                text-shadow: 1px 2px 14px black, 1px 2px 3px black;
+            }
+            ul {
+                background: yellow;
+                display: none;
+                @extend .reset-list;
+            }
+            &:hover {
+                ul {
+                    position: absolute;
+                    display: block;
+                    width: 240px;
+                    z-index: 1000;
+                    top: 30px;
+                    background: yellow;
+                    li {
+                        float: none;
+                        z-index: 1000;
+                        border-bottom: 1px solid black;
+                        a {
+                            padding: 8px;
+                            display: block;
+                            margin: 0 5px;
+                            line-height: 30px;
+                            @extend .reset-link;
+                            color: black;
+                            text-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

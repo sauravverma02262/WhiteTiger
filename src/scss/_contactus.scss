@@ -1,0 +1,14 @@
+.contactus {
+    .contact-info {
+    	line-height: 30px;
+        font-size: 20px;
+        color: #2e3c4d;
+        .street-name {}
+        .phone, .mobile, .email {
+            span {
+                font-weight:600;
+            }
+        }
+        
+    }
+}
